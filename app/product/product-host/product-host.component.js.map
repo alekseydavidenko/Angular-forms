@@ -1,0 +1,1 @@
+{"version":3,"file":"product-host.component.js","sourceRoot":"","sources":["product-host.component.ts"],"names":[],"mappings":";;;;;;;;AAAA,sCAA0C;AAMvC;IAAA;IAEH,CAAC;IAFe,oBAAoB;QAJnC,gBAAS,CAAC;YACP,QAAQ,EAAE,MAAM,CAAC,EAAE;YACnB,QAAQ,EAAE,cAAc;YACxB,WAAW,EAAE,6BAA6B;SAC7C,CAAC;OAAc,oBAAoB,CAEnC;IAAD,2BAAC;CAAA,AAFE,IAEF;AAFe,oDAAoB"}

@@ -1,0 +1,29 @@
+<form (ngSubmit)="add()" [formGroup]="addForm">      
+    <div class="form-group">
+        <label for="category">Category</label>
+        <select class="form-control" id="category" required
+        formControlName="category">
+            <option *ngFor="let item of categorys" [value]="item">{{item}}</option>
+        </select>
+    </div> 
+
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required placeholder="add name"
+        minlength="4" formControlName="name">
+        <div *ngIf="formErrors.name" class="error">
+            {{formErrors.name}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" class="form-control" id="price" required placeholder="add price"
+        formControlName="price">
+        <div *ngIf="formErrors.name" class="error">
+            {{formErrors.price}}
+        </div>
+    </div>
+    <nav>
+        <button type="submit" class="btn btn-success" [disabled]="!addForm.valid">Сохранить</button>
+    </nav>
+</form>

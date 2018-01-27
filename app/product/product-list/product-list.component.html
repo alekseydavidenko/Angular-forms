@@ -1,0 +1,29 @@
+<router-outlet></router-outlet>
+<nav>
+    <button type="button" class="btn" (click)="addProduct()">Добавить продукт</button>
+</nav>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>id</td>
+            <td>
+                <select class="form-control" [(ngModel)]="sortSelectCategory" (change)="changeSelect()">
+                    <option *ngFor="let category of selectCategory">{{category}}</option>
+                </select>
+            </td>
+            <td>name</td>
+            <td>price</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td (click)="onSelect(product)">{{product.id}}</td>
+            <td (click)="onSelect(product)">{{product.category}}</td>
+            <td (click)="onSelect(product)">{{product.name}}</td>
+            <td (click)="onSelect(product)">{{product.price}}</td>
+            <td>
+                <button type="button" class="btn btn-danger" (click)="remove(product.id)">Delete</button>
+            </td>            
+        </tr>        
+    </tbody>
+</table>
